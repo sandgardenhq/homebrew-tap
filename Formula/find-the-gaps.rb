@@ -5,6 +5,7 @@ class FindTheGaps < Formula
   license "MIT"
 
   depends_on "node"
+  depends_on "hugo"
 
   on_macos do
     on_arm do
@@ -33,7 +34,8 @@ class FindTheGaps < Formula
   end
 
   def post_install
-    system bin/"ftg", "install-deps"
+    # system bin/"ftg", "install-deps"
+    system "npm" "install" "-g" "@sandgarden/mdfetch@latest"
   end
 
   def caveats

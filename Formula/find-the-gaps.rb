@@ -1,31 +1,31 @@
 class FindTheGaps < Formula
   desc "Find documentation gaps between a codebase and its docs site"
   homepage "https://github.com/sandgardenhq/find-the-gaps"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
-  depends_on "node"
   depends_on "hugo"
+  depends_on "sandgardenhq/tap/mdfetch"
 
   on_macos do
     on_arm do
-      url "https://github.com/sandgardenhq/find-the-gaps/releases/download/v0.2.0/find-the-gaps_v0.2.0_darwin-arm64.tar.gz"
-      sha256 "3fc736c97777be29880f25c2c1ca4a81e78b1101391ef67562a517816b4d1bb7"
+      url "https://github.com/sandgardenhq/find-the-gaps/releases/download/v0.3.0/find-the-gaps_v0.3.0_darwin-arm64.tar.gz"
+      sha256 "3fcdfc3bf9f036c00dc8a085728ce0f178fce05bb8a3ff10a323b7a55fb42cb5"
     end
     on_intel do
-      url "https://github.com/sandgardenhq/find-the-gaps/releases/download/v0.2.0/find-the-gaps_v0.2.0_darwin-amd64.tar.gz"
-      sha256 "f88c33ec771d1ad962d91b95574e5963142e3f663fba4a4174290abddb5d6f77"
+      url "https://github.com/sandgardenhq/find-the-gaps/releases/download/v0.3.0/find-the-gaps_v0.3.0_darwin-amd64.tar.gz"
+      sha256 "039254f0da17869b593c6dd6ba964872aca820ce1b26f57d35dccf63f1e91a8d"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/sandgardenhq/find-the-gaps/releases/download/v0.2.0/find-the-gaps_v0.2.0_linux-arm64.tar.gz"
-      sha256 "a0bbb281149419addb43357351a9d5cc1ed23c403e48779e55e0a8baa753b856"
+      url "https://github.com/sandgardenhq/find-the-gaps/releases/download/v0.3.0/find-the-gaps_v0.3.0_linux-arm64.tar.gz"
+      sha256 "215e6b3ecd7a889f8340aeb2f38e17b26705d882b8758b465ab9e4ce40b29663"
     end
     on_intel do
-      url "https://github.com/sandgardenhq/find-the-gaps/releases/download/v0.2.0/find-the-gaps_v0.2.0_linux-amd64.tar.gz"
-      sha256 "f8902d069347242a9dc525a85ad7b2507af5a4fdd819c8392b47e9f2ad66c8a8"
+      url "https://github.com/sandgardenhq/find-the-gaps/releases/download/v0.3.0/find-the-gaps_v0.3.0_linux-amd64.tar.gz"
+      sha256 "49dae262a0b53725f20f3bd13d13fc86dcfe30e4e0b06f0d720d8790b0db1bac"
     end
   end
 
@@ -33,18 +33,13 @@ class FindTheGaps < Formula
     bin.install "ftg"
   end
 
-  def post_install
-    # system bin/"ftg", "install-deps"
-    system "npm" "install" "-g" "@sandgarden/mdfetch@latest"
-  end
-
   def caveats
     <<~EOS
-      find-the-gaps shells out to two external tools, both installed during post_install:
-        • mdfetch (npm package @sandgarden/mdfetch) — installed into Node's global prefix
-        • hugo (Homebrew formula) — installed via `brew install hugo`
+      find-the-gaps shells out to two external tools, both installed as Homebrew dependencies:
+        • mdfetch (sandgardenhq/tap/mdfetch)
+        • hugo
       `brew uninstall find-the-gaps` will NOT remove either. To clean up:
-        npm uninstall -g @sandgarden/mdfetch
+        brew uninstall sandgardenhq/tap/mdfetch
         brew uninstall hugo
       Verify with: ftg doctor
     EOS

@@ -1,7 +1,7 @@
 class FindTheGaps < Formula
   desc "Find documentation gaps between a codebase and its docs site"
   homepage "https://github.com/sandgardenhq/find-the-gaps"
-  version "0.5.1"
+  version "0.6.0"
   license "MIT"
 
   depends_on "hugo"
@@ -9,23 +9,23 @@ class FindTheGaps < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/sandgardenhq/find-the-gaps/releases/download/v0.5.1/find-the-gaps_v0.5.1_darwin-arm64.tar.gz"
-      sha256 "750e7db75a5891c5af28c0cf58157d9d82115f9a59ea556debaa80c061b7e0ef"
+      url "https://github.com/sandgardenhq/find-the-gaps/releases/download/v0.6.0/find-the-gaps_v0.6.0_darwin-arm64.tar.gz"
+      sha256 "71dc42c3ca053029f1ceab45b70574f27fcb75fae5e8f1e5dce130e9e07396bd"
     end
     on_intel do
-      url "https://github.com/sandgardenhq/find-the-gaps/releases/download/v0.5.1/find-the-gaps_v0.5.1_darwin-amd64.tar.gz"
-      sha256 "c32a91873e377778b09dbe2fc072a4a9178bc7d0f536958eeceb1b8e5125feef"
+      url "https://github.com/sandgardenhq/find-the-gaps/releases/download/v0.6.0/find-the-gaps_v0.6.0_darwin-amd64.tar.gz"
+      sha256 "658d53bb2ce57567a926d5691bb44c2205085d71795c93a1994a4de2f52c1937"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/sandgardenhq/find-the-gaps/releases/download/v0.5.1/find-the-gaps_v0.5.1_linux-arm64.tar.gz"
-      sha256 "3fb2428dc7b55af97e2ec4ca8732026941fb161ceb467afa668f8aadd7721ee6"
+      url "https://github.com/sandgardenhq/find-the-gaps/releases/download/v0.6.0/find-the-gaps_v0.6.0_linux-arm64.tar.gz"
+      sha256 "40028fccfee29bb9c230087bef888903382f0531d66261204ce265ac675d9a34"
     end
     on_intel do
-      url "https://github.com/sandgardenhq/find-the-gaps/releases/download/v0.5.1/find-the-gaps_v0.5.1_linux-amd64.tar.gz"
-      sha256 "4e196ad7c65e55b997d5bbb114611678d560e3682ce930af34ae3bd0070ad59f"
+      url "https://github.com/sandgardenhq/find-the-gaps/releases/download/v0.6.0/find-the-gaps_v0.6.0_linux-amd64.tar.gz"
+      sha256 "eb24d981cd79e1f42b4f97131a3673544776cf0f2b6cb504747ee08c60eaddc5"
     end
   end
 

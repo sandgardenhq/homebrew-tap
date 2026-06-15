@@ -5,23 +5,23 @@
 class GdocsMdFs < Formula
   desc "Mount Google Drive as a local FUSE filesystem with Google Docs as Markdown."
   homepage "https://github.com/sandgardenhq/gdocs-md-fs"
-  version "0.1.1"
+  version "0.2.0"
   license "MIT"
 
   depends_on "libfuse" if OS.linux?
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sandgardenhq/gdocs-md-fs/releases/download/v0.1.1/gdocs-md-fs_v0.1.1_darwin-amd64.tar.gz"
-      sha256 "d4d586fbb3b0dfc9373a8e4084b2726749bd2fe78e682c4db2b19254227f271c"
+      url "https://github.com/sandgardenhq/gdocs-md-fs/releases/download/v0.2.0/gdocs-md-fs_v0.2.0_darwin-amd64.tar.gz"
+      sha256 "c98344abdd31e0d245aac18a4074089a032094b2c4f70f8d0d41e306933d4466"
 
       define_method(:install) do
         bin.install "gdocs-md-fs"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sandgardenhq/gdocs-md-fs/releases/download/v0.1.1/gdocs-md-fs_v0.1.1_darwin-arm64.tar.gz"
-      sha256 "99f3ec8df8dae5de4d46a597be39c763f0f7ea622c40747eec59fc8b98b26814"
+      url "https://github.com/sandgardenhq/gdocs-md-fs/releases/download/v0.2.0/gdocs-md-fs_v0.2.0_darwin-arm64.tar.gz"
+      sha256 "5286abb34df1b3fab39cd03f488b2e27e17a1886f2c9141f9c81d72fad30b72e"
 
       define_method(:install) do
         bin.install "gdocs-md-fs"
@@ -31,15 +31,15 @@ class GdocsMdFs < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sandgardenhq/gdocs-md-fs/releases/download/v0.1.1/gdocs-md-fs_v0.1.1_linux-amd64.tar.gz"
-      sha256 "0ceed548949176a33b44a907d54b5eb7f84b1dd9df9c8b7a31ac6334527ade8e"
+      url "https://github.com/sandgardenhq/gdocs-md-fs/releases/download/v0.2.0/gdocs-md-fs_v0.2.0_linux-amd64.tar.gz"
+      sha256 "d4c27db640a0836ece456f5218c29101cc3d66d8a2c0dac1fc89e09f262bafb8"
       define_method(:install) do
         bin.install "gdocs-md-fs"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sandgardenhq/gdocs-md-fs/releases/download/v0.1.1/gdocs-md-fs_v0.1.1_linux-arm64.tar.gz"
-      sha256 "d7e301357b134784d8af9d92d1bc03a96729111dd026cecc061eb776571b69c9"
+      url "https://github.com/sandgardenhq/gdocs-md-fs/releases/download/v0.2.0/gdocs-md-fs_v0.2.0_linux-arm64.tar.gz"
+      sha256 "b034ed4a93f152d83774ca50e78365c53541d04fa42abd58af9c29e598f94817"
       define_method(:install) do
         bin.install "gdocs-md-fs"
       end

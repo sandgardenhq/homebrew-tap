@@ -5,7 +5,7 @@
 class MirandaCollector < Formula
   desc "Collector that reports coding-agent token usage to Miranda"
   homepage "https://miranda.co"
-  version "26.10.9589"
+  version "26.10.9661"
   license "Apache-2.0"
 
   on_macos do

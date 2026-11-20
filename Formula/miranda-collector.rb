@@ -5,28 +5,28 @@
 class MirandaCollector < Formula
   desc "Collector that reports coding-agent token usage to Miranda"
   homepage "https://miranda.co"
-  version "26.11.30130"
+  version "26.11.30164"
   license "Apache-2.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/sandgardenhq/plugins/releases/download/collector-6bb425493958/miranda-collector-darwin-arm64"
-      sha256 "c239d5a72859a706ccd97d3a4adbda2a9d7d9242e57f1bd8e09761237bfb53d6"
+      url "https://github.com/sandgardenhq/plugins/releases/download/collector-c9549fcdb4a9/miranda-collector-darwin-arm64"
+      sha256 "4866f09b90c6eedde46dcd3112e261e9a68a77c1e72c22c55a08832791d37858"
     end
     on_intel do
-      url "https://github.com/sandgardenhq/plugins/releases/download/collector-6bb425493958/miranda-collector-darwin-x64"
-      sha256 "24e531f1c44b5e6a5cb9f2f90eedfa854a30415566569a199a3d721e4126c6de"
+      url "https://github.com/sandgardenhq/plugins/releases/download/collector-c9549fcdb4a9/miranda-collector-darwin-x64"
+      sha256 "f84115a783737a14bb7de039c78cac2f37b97f7fd4c6f1dd35f7f3101ab252d1"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/sandgardenhq/plugins/releases/download/collector-6bb425493958/miranda-collector-linux-arm64"
-      sha256 "322252208f0fbb9700edd74a52ac0903baf8ac1c39bd3606365cce14b72ff15b"
+      url "https://github.com/sandgardenhq/plugins/releases/download/collector-c9549fcdb4a9/miranda-collector-linux-arm64"
+      sha256 "ee4c2ec21bfcd2e3c0d211551f95923f2b0f72bf08a55b25061d09fdd95cdfc2"
     end
     on_intel do
-      url "https://github.com/sandgardenhq/plugins/releases/download/collector-6bb425493958/miranda-collector-linux-x64"
-      sha256 "b1448bd9d437d34672eb05260b307c25e0cb6c6ebcdaa72c50ab280c8af5b6f1"
+      url "https://github.com/sandgardenhq/plugins/releases/download/collector-c9549fcdb4a9/miranda-collector-linux-x64"
+      sha256 "d60c8bc2b188f837b7ae9606886a8bc990dabd3e6cd7c5a5ed0cc94c22636e74"
     end
   end
 
